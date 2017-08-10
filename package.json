@@ -1,0 +1,25 @@
+{
+    "name": "pjbank-js-sdk",
+    "version": "1.0.0",
+    "description": "SDK de Integração do PJBank Recebimentos e Conta Digital",
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "run"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/msfidelis/pjbank-js-sdk.git"
+    },
+    "keywords": [
+        "fintech",
+        "boleto",
+        "cartao",
+        "pjbank"
+    ],
+    "author": "Matheus Fidelis",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/msfidelis/pjbank-js-sdk/issues"
+    },
+    "homepage": "https://github.com/msfidelis/pjbank-js-sdk#readme"
+}
