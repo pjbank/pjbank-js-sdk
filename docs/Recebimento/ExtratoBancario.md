@@ -64,3 +64,60 @@ PJBank.Recebimento.Extrato()
     ]
 }
 ```
+
+## Filtrando somente por cobrancas liquidadas no extrato 
+
+```javascript
+
+const opcoesExtrato = {
+    pago: true
+};
+
+PJBank.Recebimento.Extrato(opcoesExtrato)
+    .then((extrato) => {
+        console.log(extrato.extrato.length);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+```
+
+## Filtrando o extrato por data
+
+> As datas devem ser informadas no formato `MM/DD/AAAA`
+
+```javascript
+const opcoesExtrato = {
+    data_inicio: '07/25/2017',
+    data_fim: '07/25/2017'
+};
+
+PJBank.Recebimento.Extrato(opcoesExtrato)
+    .then((extrato) => {
+        console.log(extrato.extrato);
+        console.log(extrato.extrato.length);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+```
+
+## Paginando o extrato
+
+> Limite: 50 por `pagina`
+
+```javascript
+const opcoesExtrato = {
+    pagina : 2
+};
+
+PJBank.Recebimento.Extrato(opcoesExtrato)
+    .then((extrato) => {
+        console.log(extrato.extrato);
+        console.log(extrato.extrato.length);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+```
