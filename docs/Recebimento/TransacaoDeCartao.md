@@ -47,3 +47,29 @@ PJBank.Recebimento.Cartao.NovaTransacao({
 }
 
 ```
+
+
+## Cancelamento de uma transacao 
+
+> Você pode facilmente cancelar uma transacão de Cartão de Crédito informando o `tid` gerado na criacão da mesma.
+
+```javascript
+const PJBank = new PJBankSDK(credencial, chave);
+
+PJBank.Recebimento.Cartao.Cancelar("2017000006910010656914")
+    .then((cancelamento) => {
+        console.log(cancelamento)
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+```
+
+### Output 
+
+```json
+{
+    "status": "200",
+    "msg": "Sucesso."
+}
+```

@@ -8,20 +8,10 @@ const chave = "ef947cf5867488f744b82744dd3a8fc4852e529f";
 
 const PJBank = new PJBankSDK(credencial, chave);
 
-PJBank.Recebimento.Cartao.NovaTransacao({
-        numero_cartao: "4012001037141112",
-        nome_cartao: "Cliente Exemplo",
-        mes_vencimento: "05",
-        ano_vencimento: "2018",
-        cpf_cartao: "07727876208",
-        email_cartao: "api@pjbank.com.br",
-        celular_cartao: "",
-        codigo_cvv: "123",
-        valor: 1,
-    })
-    .then((transacao) => {
-        console.log(transacao);
+PJBank.Recebimento.Cartao.Cancelar("2017000006910010656310")
+    .then((cancelamento) => {
+        console.log(cancelamento);
     })
     .catch((err) => {
         console.log(err);
-    });
+    })
