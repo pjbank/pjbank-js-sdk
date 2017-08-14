@@ -76,3 +76,37 @@ PJBank.Recebimento.Boletos.NovoBoleto(dadosBoleto)
 }
 ```
 
+# Documentacão e Exemplos
+
+## Recebimento
+
+### Boleto Bancário 
+
+* [Emitindo boletos bancários](docs/Recebimento/EmitirBoletoBancario.md) 
+
+    * [Quickstart](docs/Recebimento/EmitirBoletoBancario.md#Quickstart-com-o-Boleto-bancário)
+
+    * [Customizacão do Boleto bancário](docs/Recebimento/EmitirBoletoBancario.md#Customizacao-do-Boleto-bancário)
+
+* [Imprimindo boletos em lote](docs/Recebimento/ImpressaoBoletosEmLote.md)
+
+
+### Cartão de Crédito 
+
+* [Criando transacões de cartão de crédito](docs/Recebimento/TransacaoDeCartao.md) 
+
+    * [Quickstart](docs/Recebimento/TransacaoDeCartao.md#quickstart-rapido)
+    * [Cancelamento de uma transacao](docs/Recebimento/TransacaoDeCartao.md#cancelamento-de-uma-transacao)
+
+
+### Extrato bancário
+
+* [Gerando extratos de recebimento](docs/Recebimento/ExtratoBancario.md)
+
+    * [Quickstart](docs/Recebimento/ExtratoBancario.md#quickstart-do-extrato)
+    * [Filtrando por cobrancas liquidadas](docs/Recebimento/ExtratoBancario.md#filtrando-somente-por-cobrancas-liquidadas-no-extrato)
+    * [Filtrando o extrato por data](docs/Recebimento/ExtratoBancario.md#filtrando-o-extrato-por-data)
+    * [Paginando o extrato](docs/Recebimento/ExtratoBancario.md#paginando-o-extrato)
+## Conta Digital 
+
+> Em breve...
