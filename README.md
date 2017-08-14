@@ -70,7 +70,7 @@ PJBank.Recebimento.Boletos.NovoBoleto(dadosBoleto)
   "token_facilitador": "abe2658dc12bb4a300cc202b60ec87624a60157d",
   "credencial": "d3418668b85cea70aa28965eafaf927cd34d004c",
   "linkBoleto": "https://pjbank.com.br/subadquirente/api/publico/boleto?i=ac0e56cb6327716148026058dbd766405a956b81",
-  "linkGrupo": 'https://pjbank.com.br/subadquirente/api/publico/boleto?g=cea7286b0db4f1f950ed9725bcfad201f7e60e87",
+  "linkGrupo": "https://pjbank.com.br/subadquirente/api/publico/boleto?g=cea7286b0db4f1f950ed9725bcfad201f7e60e87",
   "linhaDigitavel": '"03399.69925 58700.001066 47852.401018 4 81190000005050" 
 }
 ```
