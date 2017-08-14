@@ -2,7 +2,7 @@
     "name": "pjbank-js-sdk",
     "version": "1.0.0",
     "description": "SDK de Integração do PJBank Recebimentos e Conta Digital",
-    "main": "lib/index.js",
+    "main": "lib/pjbank.js",
     "scripts": {
         "test": "run"
     },
@@ -21,5 +21,10 @@
     "bugs": {
         "url": "https://github.com/msfidelis/pjbank-js-sdk/issues"
     },
-    "homepage": "https://github.com/msfidelis/pjbank-js-sdk#readme"
+    "homepage": "https://github.com/msfidelis/pjbank-js-sdk#readme",
+    "dependencies": {
+        "colors": "^1.1.2",
+        "pjbank-api-client": "^1.0.4",
+        "winston": "^2.3.1"
+    }
 }
