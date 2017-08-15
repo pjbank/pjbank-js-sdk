@@ -65,7 +65,7 @@ PJBank.Recebimento.Cartao.NovaTransacao({
             })
 ```
 
-## Gerando uma trasação parcelada no cartão 
+## Gerando uma transação parcelada no cartão 
 
 > Você pode informar o numero de parcelas num máximo de 12x para realizar o pagamento.
 
