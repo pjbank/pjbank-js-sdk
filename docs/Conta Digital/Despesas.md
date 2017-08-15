@@ -111,4 +111,13 @@
 > Também é possível gerar o cancelamento de uma despesa
 
 ```javascript
+
+    PJBank.ContaDigital.Despesas.cancelarDespesa("123123123")
+        .then((cancelamento) => {
+            console.log(cancelamento);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
 ```
