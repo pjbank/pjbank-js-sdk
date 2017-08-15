@@ -48,6 +48,42 @@ PJBank.Recebimento.Cartao.NovaTransacao({
 
 ```
 
+## Gerando uma transação utilizando um Token
+
+> Após o primeiro pagamento utilizando os dados do cartão, será devolvido um `token_cartao`. Este token pode ser armazenado para realizar futuras transações. 
+
+```javascript
+PJBank.Recebimento.Cartao.NovaTransacao({
+                'token_cartao': "80bafbb311c8ca17b06a6027fe1bcc8ad635602a",
+                'valor': 10.4
+            })
+            .then((transacao) => {
+                console.log(transacao);
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+```
+
+## Gerando uma trasação parcelada no cartão 
+
+> Você pode informar o numero de parcelas num máximo de 12x para realizar o pagamento.
+
+```javascript
+PJBank.Recebimento.Cartao.NovaTransacao({
+                'token_cartao': "80bafbb311c8ca17b06a6027fe1bcc8ad635602a",
+                'valor': 500, 
+                'parcelas': 3
+            })
+            .then((transacao) => {
+                console.log(transacao);
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+```
+
+
 
 ## Cancelamento de uma transacao 
 

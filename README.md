@@ -81,6 +81,8 @@ Para mais informações consulte a [documentação da nossa API](https://embreve
 * [Criando transacões de cartão de crédito](docs/Recebimento/TransacaoDeCartao.md) 
 
     * [Criando uma transação com os dados do cartão](docs/Recebimento/TransacaoDeCartao.md#quickstart-rapido)
+    * [Criando uma transação utilizando um Token](docs/Recebimento/TransacaoDeCartao.md#gerando-uma-transacao-utilizando-um-token)
+    * [Criando uma transacão parcelada no cartão](docs/Recebimento/TransacaoDeCartao.md#gerando-uma-transacao-parcelada-no-cartao)
     * [Cancelamento de uma transação](docs/Recebimento/TransacaoDeCartao.md#cancelamento-de-uma-transacao)
     * [Tokenizando um cartão](docs/Recebimento/TransacaoDeCartao.md#tokenizando-um-cartao-de-credito)
 
