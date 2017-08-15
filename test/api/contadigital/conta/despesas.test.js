@@ -115,4 +115,59 @@ suite("#CONTADIGITAL - #Despesas", () => {
 
     });
 
+
+    test('Cancelando uma despesa', (done) => {
+
+        const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
+
+        const Despesa = {
+            "data_vencimento": "08/30/2017",
+            "data_pagamento": "08/30/2017",
+            "valor": 20.00,
+            "banco_favorecido": "033",
+            "agencia_favorecido": "1111-X",
+            "conta_favorecido": "11111",
+            "cnpj_favorecido": "45475754000136",
+            "nome_favorecido": "Cliente Exemplo",
+            "identificador": "123123",
+            "descricao": "Descrição de exemplo",
+            "solicitante": "Teste DOC/TED",
+            "tipo_conta_favorecido": "corrente"
+        };
+
+        PJBank.ContaDigital.Despesas.NovaDespesa(Despesa)
+            .then((despesa) => {
+
+                expect(despesa).to.have.property('status');
+                assert.equal(despesa.status, 201);
+
+                expect(despesa).to.have.property('msg');
+                assert.equal(despesa.msg, 'Despesa cadastrada com sucesso.');
+
+                expect(despesa).to.have.property('identificador');
+                expect(despesa).to.have.property('id_operacao');
+
+
+                PJBank.ContaDigital.Despesas.cancelarDespesa(despesa.id_operacao)
+                    .then((response) => {
+                        console.log(response);
+                        done();
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                        done();
+                    })
+
+
+
+                done();
+            })
+            .catch((err) => {
+                console.log(err);
+                assert.isTrue(false);
+                done();
+            });
+
+    });
+
 });
