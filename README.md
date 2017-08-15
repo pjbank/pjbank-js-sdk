@@ -85,7 +85,6 @@ PJBank.Recebimento.Boletos.NovoBoleto(dadosBoleto)
 * [Emitindo boletos bancários](docs/Recebimento/EmitirBoletoBancario.md) 
 
     * [Quickstart](docs/Recebimento/EmitirBoletoBancario.md#Quickstart-com-o-Boleto-bancário)
-
     * [Customizacão do Boleto bancário](docs/Recebimento/EmitirBoletoBancario.md#Customizacao-do-Boleto-bancário)
 
 * [Imprimindo boletos em lote](docs/Recebimento/ImpressaoBoletosEmLote.md)
