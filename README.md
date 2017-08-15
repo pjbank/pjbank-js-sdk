@@ -80,6 +80,8 @@ PJBank.Recebimento.Boletos.NovoBoleto(dadosBoleto)
 
 # Documentacão e Exemplos
 
+Para mais informações consulte a [documentação da nossa API](https://embreve.com)
+
 ## Recebimento
 
 ### Boleto Bancário 
