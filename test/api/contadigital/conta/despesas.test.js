@@ -1,0 +1,118 @@
+'use strict';
+
+const PJBankSDK = require('../../../../lib/pjbank');
+
+const Lab = require('lab');
+const lab = exports.lab = Lab.script();
+
+const suite = lab.suite;
+const test = lab.test;
+
+const expect = require('chai').expect;
+const assert = require('chai').assert;
+
+suite("#CONTADIGITAL - #Despesas", () => {
+
+    test('Gerando uma despesa', (done) => {
+
+        const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
+
+        const Despesa = {
+            "data_vencimento": "08/30/2017",
+            "data_pagamento": "08/30/2017",
+            "valor": 20.00,
+            "banco_favorecido": "033",
+            "agencia_favorecido": "1111-X",
+            "conta_favorecido": "11111",
+            "cnpj_favorecido": "45475754000136",
+            "nome_favorecido": "Cliente Exemplo",
+            "identificador": "123123",
+            "descricao": "Descrição de exemplo",
+            "solicitante": "Teste DOC/TED",
+            "tipo_conta_favorecido": "corrente"
+
+        };
+
+        PJBank.ContaDigital.Despesas.NovaDespesa(Despesa)
+            .then((despesa) => {
+
+                expect(despesa).to.have.property('status');
+                assert.equal(despesa.status, 201);
+
+                expect(despesa).to.have.property('msg');
+                assert.equal(despesa.msg, 'Despesa cadastrada com sucesso.');
+
+                expect(despesa).to.have.property('identificador');
+                expect(despesa).to.have.property('id_operacao');
+
+                done();
+            })
+            .catch((err) => {
+                console.log(err);
+                assert.isTrue(false);
+                done();
+            });
+
+    });
+
+
+    test('Gerando um lote de despesas', (done) => {
+
+        const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
+
+        const Despesas = [{
+            "data_vencimento": "08/30/2017",
+            "data_pagamento": "08/30/2017",
+            "valor": 20.00,
+            "banco_favorecido": "033",
+            "agencia_favorecido": "1111-X",
+            "conta_favorecido": "11111",
+            "cnpj_favorecido": "45475754000136",
+            "nome_favorecido": "Cliente Exemplo",
+            "identificador": "123123",
+            "descricao": "Descrição de exemplo",
+            "solicitante": "Teste DOC/TED",
+            "tipo_conta_favorecido": "corrente"
+        }, {
+            "data_vencimento": "08/30/2017",
+            "data_pagamento": "08/30/2017",
+            "valor": 20.00,
+            "banco_favorecido": "033",
+            "agencia_favorecido": "1111-X",
+            "conta_favorecido": "11111",
+            "cnpj_favorecido": "45475754000136",
+            "nome_favorecido": "Cliente Exemplo2",
+            "identificador": "123123",
+            "descricao": "Descrição de exemplo2",
+            "solicitante": "Teste DOC/TED",
+            "tipo_conta_favorecido": "corrente"
+        }];
+
+        PJBank.ContaDigital.Despesas.NovaDespesa(Despesas)
+            .then((despesas) => {
+
+                console.log(despesas);
+
+                expect(despesas).to.be.an('array');
+
+                expect(despesas[0]).to.have.property('status');
+                expect(despesas[0]).to.have.property('msg');
+                expect(despesas[0]).to.have.property('identificador');
+                expect(despesas[0]).to.have.property('id_operacao');
+
+                expect(despesas[1]).to.have.property('status');
+                expect(despesas[1]).to.have.property('msg');
+                expect(despesas[1]).to.have.property('identificador');
+                expect(despesas[1]).to.have.property('id_operacao');
+
+                done();
+            })
+            .catch((err) => {
+                console.log(err);
+                assert.isTrue(false);
+                done();
+            });
+
+    });
+
+});

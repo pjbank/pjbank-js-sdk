@@ -15,7 +15,6 @@ suite("#CONTADIGITAL - #Informacões da Conta", () => {
 
     test('Retornando as infos da conta', (done) => {
 
-
         const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
 
         PJBank.ContaDigital.MinhaConta()
