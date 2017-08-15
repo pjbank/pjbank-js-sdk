@@ -1,8 +1,8 @@
 # pjbank-js-sdk
 
-![Construcao](https://openclipart.org/image/2400px/svg_to_png/231626/underconstruction.png)
-
 [![Build Status](https://secure.travis-ci.org/pjbank/pjbank-js-sdk.png?branch=master)](http://travis-ci.org/msfidelis/boreal)
+
+![Construcao](https://openclipart.org/image/2400px/svg_to_png/231626/underconstruction.png)
 
 ## Instalacão
 
