@@ -80,8 +80,9 @@ Para mais informações consulte a [documentação da nossa API](https://embreve
 
 * [Criando transacões de cartão de crédito](docs/Recebimento/TransacaoDeCartao.md) 
 
-    * [Quickstart](docs/Recebimento/TransacaoDeCartao.md#quickstart-rapido)
-    * [Cancelamento de uma transacao](docs/Recebimento/TransacaoDeCartao.md#cancelamento-de-uma-transacao)
+    * [Criando uma transação com os dados do cartão](docs/Recebimento/TransacaoDeCartao.md#quickstart-rapido)
+    * [Cancelamento de uma transação](docs/Recebimento/TransacaoDeCartao.md#cancelamento-de-uma-transacao)
+    * [Tokenizando um cartão](docs/Recebimento/TransacaoDeCartao.md#tokenizando-um-cartao-de-credito)
 
 
 ### Extrato bancário

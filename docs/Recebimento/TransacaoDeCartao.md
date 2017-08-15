@@ -73,3 +73,39 @@ PJBank.Recebimento.Cartao.Cancelar("2017000006910010656914")
     "msg": "Sucesso."
 }
 ```
+
+## Tokenizando um cartão de crédito. 
+
+> Durante o primeiro pagamento com os dados do cartão, será retornado um `token_cartao` para futuras operacões seguras conforme as recomendacões do `PCI`. Porém é possível tokenizar um cartão de crédito antes de efetuar um pagamento. 
+
+```javascript
+const DadosCartao = {
+    "nome_cartao": "Cliente Exemplo",
+    "numero_cartao": "4012001037141112",
+    "mes_vencimento": "05",
+    "ano_vencimento": "2018",
+    "cpf_cartao": "64111456529",
+    "email_cartao": "api@pjbank.com.br",
+    "celular_cartao": "978456723",
+    "codigo_cvv": "123"
+};
+
+PJBank.Recebimento.Cartao.Tokenizar(DadosCartao)
+    .then((tokenizacao) => {
+        console.log(tokenizacao);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+```
+
+### Output
+
+
+```json
+{ 
+    "status": "201",
+    "token_cartao": "8e772dceaf32305c302c35b2bd3f66ef93641c82",
+    "msg": "Sucesso ao tokenizar" 
+}
+```

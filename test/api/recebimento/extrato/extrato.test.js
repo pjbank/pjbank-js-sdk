@@ -12,45 +12,45 @@ const expect = require('chai').expect;
 const assert = require('chai').assert;
 
 
-suite("#Extrato", () => {
-    
-        test('Gerando extrato ', (done) => {
+suite("#RECEBIMENTO - #Extrato", () => {
 
-            const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
-            
-            PJBank.Recebimento.Extrato()
-                .then((extrato) => {
-                    expect(extrato).to.have.property('extrato');
-                    done();
-                })
-                .catch((err) => {
-                    console.log(err);
-                    assert.isTrue(false);
-                    done();
-                });
-        });
+    test('Gerando extrato ', (done) => {
 
-        test('Gerando extrato somente pagos', (done) => {
-            
-            const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
-            
-            PJBank.Recebimento.Extrato({"pago" : "true"})
-                .then((extrato) => {
-                    expect(extrato).to.have.property('extrato');
-                    done();
-                })
-                .catch((err) => {
-                    console.log(err);
-                    assert.isTrue(false);
-                    done();
-                });
-        });
+        const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
 
-        test('Gerando extrato filtrado entre datas', (done) => {
-            
-            const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
-            
-            PJBank.Recebimento.Extrato({
+        PJBank.Recebimento.Extrato()
+            .then((extrato) => {
+                expect(extrato).to.have.property('extrato');
+                done();
+            })
+            .catch((err) => {
+                console.log(err);
+                assert.isTrue(false);
+                done();
+            });
+    });
+
+    test('Gerando extrato somente pagos', (done) => {
+
+        const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
+
+        PJBank.Recebimento.Extrato({ "pago": "true" })
+            .then((extrato) => {
+                expect(extrato).to.have.property('extrato');
+                done();
+            })
+            .catch((err) => {
+                console.log(err);
+                assert.isTrue(false);
+                done();
+            });
+    });
+
+    test('Gerando extrato filtrado entre datas', (done) => {
+
+        const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
+
+        PJBank.Recebimento.Extrato({
                 'data_inicio': '07/25/2017',
                 'data_fim': '07/25/2017'
             })
@@ -64,6 +64,6 @@ suite("#Extrato", () => {
                 assert.isTrue(false);
                 done();
             });
-        });
-
     });
+
+});
