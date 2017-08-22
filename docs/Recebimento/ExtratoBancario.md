@@ -12,7 +12,7 @@ const chave = "ef947cf5867488f744b82744dd3a8fc4852e529f";
 const PJBankSDK = require('pjbank-js-sdk');
 const PJBank = new PJBankSDK(credencial, chave);
 
-PJBank.Recebimento.Extrato()
+PJBank.extrato()
     .then((extrato) => {
         console.log(extrato);
     })
@@ -73,7 +73,7 @@ const opcoesExtrato = {
     pago: true
 };
 
-PJBank.Recebimento.Extrato(opcoesExtrato)
+PJBank.extrato(opcoesExtrato)
     .then((extrato) => {
         console.log(extrato.extrato.length);
     })
@@ -93,7 +93,7 @@ const opcoesExtrato = {
     data_fim: '07/25/2017'
 };
 
-PJBank.Recebimento.Extrato(opcoesExtrato)
+PJBank.extrato(opcoesExtrato)
     .then((extrato) => {
         console.log(extrato.extrato);
         console.log(extrato.extrato.length);
@@ -112,10 +112,9 @@ const opcoesExtrato = {
     pagina : 2
 };
 
-PJBank.Recebimento.Extrato(opcoesExtrato)
+PJBank.extrato(opcoesExtrato)
     .then((extrato) => {
         console.log(extrato.extrato);
-        console.log(extrato.extrato.length);
     })
     .catch((err) => {
         console.log(err);

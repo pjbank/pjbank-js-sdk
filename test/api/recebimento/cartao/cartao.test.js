@@ -18,7 +18,7 @@ suite("#RECEBIMENTO - #Cartão de Crédito", () => {
 
         const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
 
-        PJBank.Recebimento.Cartao.NovaTransacao({
+        PJBank.transacao({
                 numero_cartao: "4012001037141112",
                 nome_cartao: "Cliente Exemplo",
                 mes_vencimento: "05",
@@ -62,7 +62,7 @@ suite("#RECEBIMENTO - #Cartão de Crédito", () => {
 
         const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
 
-        PJBank.Recebimento.Cartao.NovaTransacao({
+        PJBank.transacao({
                 'token_cartao': "80bafbb311c8ca17b06a6027fe1bcc8ad635602a",
                 'valor': 1,
             })
@@ -99,8 +99,7 @@ suite("#RECEBIMENTO - #Cartão de Crédito", () => {
     test('Cancelando uma transacao', (done) => {
 
         const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
-
-        PJBank.Recebimento.Cartao.NovaTransacao({
+        PJBank.transacao({
                 'token_cartao': "80bafbb311c8ca17b06a6027fe1bcc8ad635602a",
                 'valor': 1,
             })
@@ -113,9 +112,8 @@ suite("#RECEBIMENTO - #Cartão de Crédito", () => {
 
                 expect(transacao).to.have.property('tid');
 
-
-                PJBank.Recebimento.Cartao.Cancelar(transacao.tid).
-                then((cancelamento) => {
+                PJBank.cancelar(transacao.tid)
+                    .then((cancelamento) => {
 
                         assert.equal(cancelamento.status, 200);
                         assert.equal(cancelamento.msg, 'Sucesso.');
@@ -153,7 +151,7 @@ suite("#RECEBIMENTO - #Cartão de Crédito", () => {
             "codigo_cvv": "123"
         };
 
-        PJBank.Recebimento.Cartao.Tokenizar(DadosCartao)
+        PJBank.tokenizar(DadosCartao)
             .then((tokenizacao) => {
 
                 expect(tokenizacao).to.have.property('status');

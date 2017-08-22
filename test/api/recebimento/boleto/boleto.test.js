@@ -18,8 +18,7 @@ suite("#RECEBIMENTO - #Boleto Bancário", () => {
     test('Emitindo um boleto', (done) => {
 
         const PJBank = new PJBankSDK(credencialBoleto, chaveBoleto);
-
-        PJBank.Recebimento.Boletos.NovoBoleto({
+        PJBank.boleto({
             "nome_cliente": "Cliente de Exemplo",
             "cpf_cliente": "29454730000144",
             "valor": 10.50,
@@ -53,8 +52,7 @@ suite("#RECEBIMENTO - #Boleto Bancário", () => {
         const pedidoNumero = faker.random.number();
 
         const PJBank = new PJBankSDK(credencialBoleto, chaveBoleto);
-
-        PJBank.Recebimento.Boletos.NovoBoleto({
+        PJBank.boleto({
             "nome_cliente": "Cliente de Exemplo",
             "cpf_cliente": "29454730000144",
             "valor": 10.50,
@@ -75,8 +73,7 @@ suite("#RECEBIMENTO - #Boleto Bancário", () => {
             expect(boleto).to.have.property('linkBoleto');
             expect(boleto).to.have.property('linhaDigitavel');
 
-
-            PJBank.Recebimento.Boletos.Imprimir([pedidoNumero])
+            PJBank.lote([pedidoNumero])
                 .then((lote) => {
 
                     expect(lote).to.have.property('status');

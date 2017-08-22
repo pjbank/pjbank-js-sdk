@@ -19,13 +19,10 @@ const assert = require('chai').assert;
 
 //         PJBank.ContaDigital.MinhaConta()
 //             .then((dadosConta) => {
-
 //                 expect(dadosConta).to.have.property('status');
 //                 assert.equal(dadosConta.status, 200);
-
 //                 expect(dadosConta).to.have.property('msg');
 //                 assert.equal(dadosConta.msg, 'Sucesso');
-
 //                 expect(dadosConta).to.have.property('data');
 //                 expect(dadosConta.data).to.have.property('nome_empresa');
 //                 expect(dadosConta.data).to.have.property('email');
@@ -38,7 +35,6 @@ const assert = require('chai').assert;
 //                 expect(dadosConta.data).to.have.property('cidade');
 //                 expect(dadosConta.data).to.have.property('estado');
 //                 expect(dadosConta.data).to.have.property('status');
-
 //                 done();
 //             })
 //             .catch((err) => {

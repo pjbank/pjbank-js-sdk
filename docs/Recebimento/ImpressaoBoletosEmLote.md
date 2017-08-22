@@ -18,7 +18,7 @@ const MeusBoletos = [
     110, 443
 ];
 
-PJBank.Recebimento.Boletos.Imprimir(MeusBoletos)
+PJBank.lote(MeusBoletos)
     .then((lote) => {
         console.log(lote);
     }).catch((err) => {

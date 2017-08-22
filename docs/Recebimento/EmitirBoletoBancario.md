@@ -14,7 +14,7 @@ const chave = "ef947cf5867488f744b82744dd3a8fc4852e529f";
 const PJBankSDK = require('pjbank-js-sdk');
 const PJBank = new PJBankSDK(credencial, chave);
 
-PJBank.Recebimento.Boletos.NovoBoleto({
+PJBank.boleto({
     "nome_cliente" : "Cliente de Exemplo",
     "cpf_cliente" : "29454730000144",
     "valor" : 10.50,
@@ -67,7 +67,7 @@ const dadosBoleto = {
     "pedido_numero": "99795"
 };
 
-PJBank.Recebimento.Boletos.NovoBoleto(dadosBoleto)
+PJBank.boleto(dadosBoleto)
     .then((boleto) => {
         console.log(boleto);
         debug.info(boleto);

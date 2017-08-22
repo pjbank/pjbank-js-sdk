@@ -8,7 +8,7 @@
 ```javascript
 const PJBank = new PJBankSDK(credencial, chave);
 
-PJBank.Recebimento.Cartao.NovaTransacao({
+PJBank.transacao({
         numero_cartao: "4012001037141112",
         nome_cartao: "Cliente Exemplo",
         mes_vencimento: "05",
@@ -53,7 +53,7 @@ PJBank.Recebimento.Cartao.NovaTransacao({
 > Após o primeiro pagamento utilizando os dados do cartão, será devolvido um `token_cartao`. Este token pode ser armazenado para realizar futuras transações. 
 
 ```javascript
-PJBank.Recebimento.Cartao.NovaTransacao({
+PJBank.transacao({
                 'token_cartao': "80bafbb311c8ca17b06a6027fe1bcc8ad635602a",
                 'valor': 10.4
             })
@@ -70,7 +70,7 @@ PJBank.Recebimento.Cartao.NovaTransacao({
 > Você pode informar o numero de parcelas num máximo de 12x para realizar o pagamento.
 
 ```javascript
-PJBank.Recebimento.Cartao.NovaTransacao({
+PJBank.transacao({
                 'token_cartao': "80bafbb311c8ca17b06a6027fe1bcc8ad635602a",
                 'valor': 500, 
                 'parcelas': 3
@@ -92,7 +92,7 @@ PJBank.Recebimento.Cartao.NovaTransacao({
 ```javascript
 const PJBank = new PJBankSDK(credencial, chave);
 
-PJBank.Recebimento.Cartao.Cancelar("2017000006910010656914")
+PJBank.cancelar("2017000006910010656914")
     .then((cancelamento) => {
         console.log(cancelamento)
     })
@@ -126,7 +126,7 @@ const DadosCartao = {
     "codigo_cvv": "123"
 };
 
-PJBank.Recebimento.Cartao.Tokenizar(DadosCartao)
+PJBank.tokenizar(DadosCartao)
     .then((tokenizacao) => {
         console.log(tokenizacao);
     })

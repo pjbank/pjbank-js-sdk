@@ -17,8 +17,7 @@ suite("#RECEBIMENTO - #Extrato", () => {
     test('Gerando extrato somente pagos', (done) => {
 
         const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
-
-        PJBank.Recebimento.Extrato({ "pago": "true" })
+        PJBank.extrato({ "pago": "true" })
             .then((extrato) => {
                 expect(extrato).to.have.property('extrato');
                 done();
@@ -33,8 +32,7 @@ suite("#RECEBIMENTO - #Extrato", () => {
     test('Gerando extrato filtrado entre datas', (done) => {
 
         const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
-
-        PJBank.Recebimento.Extrato({
+        PJBank.extrato({
                 'data_inicio': '07/25/2017',
                 'data_fim': '07/25/2017'
             })
