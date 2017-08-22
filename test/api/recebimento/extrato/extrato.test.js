@@ -14,23 +14,6 @@ const assert = require('chai').assert;
 
 suite("#RECEBIMENTO - #Extrato", () => {
 
-    test('Gerando extrato ', (done) => {
-
-        const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
-
-        PJBank.extrato()
-            //PJBank.Recebimento.Extrato()
-            .then((extrato) => {
-                expect(extrato).to.have.property('extrato');
-                done();
-            })
-            .catch((err) => {
-                console.log(err);
-                assert.isTrue(false);
-                done();
-            });
-    });
-
     test('Gerando extrato somente pagos', (done) => {
 
         const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
