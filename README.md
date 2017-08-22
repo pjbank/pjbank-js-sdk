@@ -30,7 +30,7 @@ const PJBank = new PJBankSDK(credencial, chave);
 ### Exemplo - Emissão de boleto
 
 ```javascript
-PJBank.Recebimento.Boletos.NovoBoleto({
+PJBank.boleto({
     "nome_cliente" : "Cliente de Exemplo",
     "cpf_cliente" : "29454730000144",
     "valor" : 10.50,
