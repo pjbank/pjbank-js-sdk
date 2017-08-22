@@ -73,7 +73,7 @@ suite("#RECEBIMENTO - #Boleto Bancário", () => {
             expect(boleto).to.have.property('linkBoleto');
             expect(boleto).to.have.property('linhaDigitavel');
 
-            PJBank.imprimir([pedidoNumero])
+            PJBank.lote([pedidoNumero])
                 .then((lote) => {
 
                     expect(lote).to.have.property('status');
