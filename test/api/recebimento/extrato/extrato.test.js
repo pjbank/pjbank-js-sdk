@@ -18,7 +18,6 @@ suite("#RECEBIMENTO - #Extrato", () => {
 
         const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
         PJBank.extrato({ "pago": "true" })
-            //PJBank.Recebimento.Extrato({ "pago": "true" })
             .then((extrato) => {
                 expect(extrato).to.have.property('extrato');
                 done();
@@ -34,7 +33,6 @@ suite("#RECEBIMENTO - #Extrato", () => {
 
         const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
         PJBank.extrato({
-                //PJBank.Recebimento.Extrato({
                 'data_inicio': '07/25/2017',
                 'data_fim': '07/25/2017'
             })
