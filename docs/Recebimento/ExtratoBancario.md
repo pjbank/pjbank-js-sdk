@@ -25,44 +25,42 @@ PJBank.extrato()
 ### Output
 
 ```json
-{
-    "extrato": [
-        {
-            "tid": "2017000006910010645792",
-            "valor": "10",
-            "valor_liquido": "9.65",
-            "pedido_numero": "",
-            "autorizada": "1",
-            "cancelada": "0",
-            "parcelas": "2",
-            "data_transacao": "08\/14\/2017",
-            "data_cancelamento": "",
-            "motivo_cancelamento": "",
-            "previsao_credito": "09\/15\/2017",
-            "convenio_proprio": "",
-            "tid_conciliacao": "1006993069000AC0A60A",
-            "msg_erro": "",
-            "msg_erro_estorno": ""
-        },
-        {
-            "tid": "2017000006910010639169",
-            "valor": "3119.15",
-            "valor_liquido": "0",
-            "pedido_numero": "21839",
-            "autorizada": "0",
-            "cancelada": "0",
-            "parcelas": "1",
-            "data_transacao": "08\/14\/2017",
-            "data_cancelamento": "",
-            "motivo_cancelamento": "",
-            "previsao_credito": "",
-            "convenio_proprio": "",
-            "tid_conciliacao": "",
-            "msg_erro": "",
-            "msg_erro_estorno": ""
-        }
-    ]
-}
+[
+    {
+        "tid": "2017000006910010645792",
+        "valor": "10",
+        "valor_liquido": "9.65",
+        "pedido_numero": "",
+        "autorizada": "1",
+        "cancelada": "0",
+        "parcelas": "2",
+        "data_transacao": "08\/14\/2017",
+        "data_cancelamento": "",
+        "motivo_cancelamento": "",
+        "previsao_credito": "09\/15\/2017",
+        "convenio_proprio": "",
+        "tid_conciliacao": "1006993069000AC0A60A",
+        "msg_erro": "",
+        "msg_erro_estorno": ""
+    },
+    {
+        "tid": "2017000006910010639169",
+        "valor": "3119.15",
+        "valor_liquido": "0",
+        "pedido_numero": "21839",
+        "autorizada": "0",
+        "cancelada": "0",
+        "parcelas": "1",
+        "data_transacao": "08\/14\/2017",
+        "data_cancelamento": "",
+        "motivo_cancelamento": "",
+        "previsao_credito": "",
+        "convenio_proprio": "",
+        "tid_conciliacao": "",
+        "msg_erro": "",
+        "msg_erro_estorno": ""
+    }
+]
 ```
 
 ## Filtrando somente por cobrancas liquidadas no extrato 
@@ -75,7 +73,7 @@ const opcoesExtrato = {
 
 PJBank.extrato(opcoesExtrato)
     .then((extrato) => {
-        console.log(extrato.extrato.length);
+        console.log(extrato.length);
     })
     .catch((err) => {
         console.log(err);
@@ -95,8 +93,8 @@ const opcoesExtrato = {
 
 PJBank.extrato(opcoesExtrato)
     .then((extrato) => {
-        console.log(extrato.extrato);
-        console.log(extrato.extrato.length);
+        console.log(extrato);
+        console.log(extrato.length);
     })
     .catch((err) => {
         console.log(err);
@@ -114,7 +112,7 @@ const opcoesExtrato = {
 
 PJBank.extrato(opcoesExtrato)
     .then((extrato) => {
-        console.log(extrato.extrato);
+        console.log(extrato);
     })
     .catch((err) => {
         console.log(err);
