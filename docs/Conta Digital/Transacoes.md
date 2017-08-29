@@ -158,10 +158,10 @@
 ```javascript
 
     PJBank.ContaDigital.cancelarTransacao("1000000000709")
-        .then((cancelamento) => {
+        .then(cancelamento => {
             console.log(cancelamento);
         })
-        .catch((err) => {
+        .catch(err => {
             console.log(err);
         });
 
@@ -181,5 +181,25 @@
         }
     ]
 }
+
+```
+
+
+## Gerando um extrato de transacões
+
+```javascript
+
+    const opcoes = {
+        data_inicio : "09/01/2018",
+        data_fim : "01/30/1018"
+    }
+
+    PJBank.ContaDigital.Extrato(opcoes)
+        .then(extrato => {
+            console.log(extrato);
+        })
+        .catch(err => {
+            console.log(err);
+        });
 
 ```
