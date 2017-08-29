@@ -33,7 +33,7 @@ suite("#CONTADIGITAL - #Transacoes", () => {
 
         };
 
-        PJBank.ContaDigital.Transacao(DadosTransacao)
+        PJBank.ContaDigital.transacao(DadosTransacao)
             .then((transacao) => {
 
                 expect(transacao).to.have.property('status');
@@ -67,7 +67,7 @@ suite("#CONTADIGITAL - #Transacoes", () => {
             "codigo_barras": "03399699255873781001843279301014571980000001000"
         };
 
-        PJBank.ContaDigital.Transacao(DadosTransacao)
+        PJBank.ContaDigital.transacao(DadosTransacao)
             .then((transacao) => {
 
                 expect(transacao).to.have.property('status');
@@ -116,7 +116,7 @@ suite("#CONTADIGITAL - #Transacoes", () => {
             }
         ];
 
-        PJBank.ContaDigital.Transacao(Transacoes)
+        PJBank.ContaDigital.transacao(Transacoes)
             .then((transacoes) => {
 
                 expect(transacoes).to.have.property('status');
@@ -156,10 +156,10 @@ suite("#CONTADIGITAL - #Transacoes", () => {
             "codigo_barras": "03399699255873781001843279301014571980000001000"
         };
 
-        PJBank.ContaDigital.Transacao(DadosTransacao)
+        PJBank.ContaDigital.transacao(DadosTransacao)
             .then(transacao => {
 
-                PJBank.ContaDigital.Cancelar(transacao.data[0].id_operacao)
+                PJBank.ContaDigital.cancelar(transacao.data[0].id_operacao)
                     .then(cancelamento => {
 
                         expect(cancelamento).to.have.property('status');

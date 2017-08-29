@@ -62,7 +62,7 @@ PJBank.boleto({
 
 # Documentacão e Exemplos
 
-Para mais informações consulte a [documentação da nossa API](https://embreve.com)
+Para mais informações consulte a [documentação da nossa API](http://docs.pjbank.com.br)
 
 ## Recebimento
 
@@ -98,4 +98,15 @@ Para mais informações consulte a [documentação da nossa API](https://embreve
     * [Paginando o extrato](docs/Recebimento/ExtratoBancario.md#paginando-o-extrato)
 ## Conta Digital 
 
-> Em breve...
+> Disponibilizamos também a cobertura da API Da Conta Digital do PJBank via SDK! 
+
+### Transações 
+
+* [Como fazer uma transferência DOC/TED via Conta Digital](docs/ContaDigital/Transacoes.md#Gerando-uma-transacao-via-DOC/TED)
+* [Como pagar um boleto ou uma conta com código de barras via Conta Digital](docs/ContaDigital/Transacoes.md#Pagando-uma-despesa-de-Linha-Digitavel)
+* [Gerando transacões em lotes](docs/ContaDigital/Transacoes.md#Gerando-transacoes-em-lotes)
+* [Como cancelar uma transacão na Conta Digital](docs/ContaDigital/Transacoes.md#Cancelando-transacoes-na-Conta-Digital)
+
+### Extratos da Conta Digital
+
+* [Como consultar o extrato de transacões da Conta Digital](docs/ContaDigital/Transacoes.md#Gerando-um-extrato-de-transacoes)

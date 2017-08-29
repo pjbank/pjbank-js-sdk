@@ -23,7 +23,7 @@ suite("#CONTADIGITAL - #Extrato", () => {
             data_fim: "08/09/2017"
         };
 
-        PJBank.ContaDigital.Extrato(opcoes)
+        PJBank.ContaDigital.extrato(opcoes)
             .then(extrato => {
                 expect(extrato).to.have.property('status');
                 assert.equal(extrato.status, 200);
