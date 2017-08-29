@@ -145,6 +145,36 @@ suite("#CONTADIGITAL - #Transacoes", () => {
     });
 
 
+    test('Consultando uma transacão', (done) => {
+
+        const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
+
+        PJBank.ContaDigital.status("1000000000709")
+            .then(status => {
+
+                expect(status).to.have.property('status');
+                assert.equal(status.status, 200);
+
+                expect(status).to.have.property('data');
+                expect(status.data).to.be.a('array');
+
+                expect(status.data[0]).to.have.property('id_operacao');
+                expect(status.data[0]).to.have.property('status_operacao');
+                expect(status.data[0]).to.have.property('data_pagamento');
+                expect(status.data[0]).to.have.property('aprovacoes_confirmadas');
+                expect(status.data[0]).to.have.property('qtd_aprovacoes');
+                expect(status.data[0]).to.have.property('msg');
+
+                done();
+            })
+            .catch(err => {
+                console.log(err);
+                done();
+            });
+
+    });
+
+
     test('Cancelando uma transacão', (done) => {
 
         const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
