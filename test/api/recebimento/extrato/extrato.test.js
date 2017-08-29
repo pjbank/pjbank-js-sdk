@@ -19,7 +19,7 @@ suite("#RECEBIMENTO - #Extrato", () => {
         const PJBank = new PJBankSDK(credencialCartao, chaveCartao);
         PJBank.extrato({ "pago": "true" })
             .then((extrato) => {
-                expect(extrato).to.have.property('extrato');
+                expect(extrato).to.be.a('array');
                 done();
             })
             .catch((err) => {
@@ -37,8 +37,8 @@ suite("#RECEBIMENTO - #Extrato", () => {
                 'data_fim': '07/25/2017'
             })
             .then((extrato) => {
-                expect(extrato).to.have.property('extrato');
-                expect(extrato.extrato.length).to.be.equal(50);
+                expect(extrato).to.be.a('array');
+                expect(extrato.length).to.be.equal(50);
                 done();
             })
             .catch((err) => {
