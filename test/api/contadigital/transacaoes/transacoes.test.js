@@ -56,7 +56,7 @@ suite("#CONTADIGITAL - #Transacoes", () => {
     });
 
 
-    test('Pagamendo uma despesa com linha digitável', (done) => {
+    test('Pagando uma despesa via linha digitável', (done) => {
 
         const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
 
@@ -141,6 +141,46 @@ suite("#CONTADIGITAL - #Transacoes", () => {
             });
 
 
+
+    });
+
+
+    test('Cancelando uma transacão', (done) => {
+
+        const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
+
+        const DadosTransacao = {
+            "data_vencimento": "09/30/2017",
+            "data_pagamento": "09/30/2017",
+            "valor": 10.50,
+            "codigo_barras": "03399699255873781001843279301014571980000001000"
+        };
+
+        PJBank.ContaDigital.Transacao(DadosTransacao)
+            .then(transacao => {
+
+                PJBank.ContaDigital.Cancelar(transacao.data[0].id_operacao)
+                    .then(cancelamento => {
+
+                        expect(cancelamento).to.have.property('status');
+                        expect(cancelamento).to.have.property('msg');
+                        assert.equal(cancelamento.status, 200);
+
+                        expect(cancelamento).to.have.property('data');
+                        expect(cancelamento.data).to.be.a('array');
+
+                        done();
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        done();
+                    });
+
+            })
+            .catch(err => {
+                console.log(err);
+                done();
+            });
 
     });
 

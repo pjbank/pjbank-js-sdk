@@ -151,18 +151,35 @@
 
 ```
 
-# Cancelando transacoes na Conta Digital
+## Cancelando transacoes na Conta Digital
 
-> Também é possível gerar o cancelamento de uma transacao
+> Também é possível gerar o cancelamento de uma transacao informando o campo `id_operacao` retornado ao criar a mesma.
 
 ```javascript
 
-    PJBank.ContaDigital.Despesas.cancelarDespesa("123123123")
+    PJBank.ContaDigital.cancelarTransacao("1000000000709")
         .then((cancelamento) => {
             console.log(cancelamento);
         })
         .catch((err) => {
             console.log(err);
         });
+
+```
+
+### Output
+
+```json
+
+{
+    "status": "200",
+    "msg": "Todos os itens foram processados com sucesso.",
+    "data": [
+        {
+            "status": "200",
+            "msg": "Despesa #123123 cancelada com sucesso."
+        }
+    ]
+}
 
 ```
