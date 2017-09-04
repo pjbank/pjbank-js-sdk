@@ -52,7 +52,7 @@ suite("#CONTADIGITAL - #Transacoes", () => {
             })
             .catch((err) => {
                 console.log(err);
-                done();
+                done(err);
             });
 
     });
@@ -86,7 +86,7 @@ suite("#CONTADIGITAL - #Transacoes", () => {
             })
             .catch((err) => {
                 console.log(err);
-                done();
+                done(err);
             });
 
     });
@@ -139,7 +139,7 @@ suite("#CONTADIGITAL - #Transacoes", () => {
             })
             .catch((err) => {
                 console.log(err);
-                done();
+                done(err);
             });
 
 
@@ -171,7 +171,7 @@ suite("#CONTADIGITAL - #Transacoes", () => {
             })
             .catch(err => {
                 console.log(err);
-                done();
+                done(err);
             });
 
     });
@@ -205,13 +205,13 @@ suite("#CONTADIGITAL - #Transacoes", () => {
                     })
                     .catch(err => {
                         console.log(err);
-                        done();
+                        done(err);
                     });
 
             })
             .catch(err => {
                 console.log(err);
-                done();
+                done(err);
             });
 
     });

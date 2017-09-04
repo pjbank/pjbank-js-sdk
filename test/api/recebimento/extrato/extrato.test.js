@@ -24,8 +24,7 @@ suite("#RECEBIMENTO - #Extrato", () => {
             })
             .catch((err) => {
                 console.log(err);
-                assert.isTrue(false);
-                done();
+                done(err);
             });
     });
 
@@ -43,8 +42,7 @@ suite("#RECEBIMENTO - #Extrato", () => {
             })
             .catch((err) => {
                 console.log(err);
-                assert.isTrue(false);
-                done();
+                done(err);
             });
     });
 
