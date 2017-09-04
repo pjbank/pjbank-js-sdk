@@ -36,6 +36,7 @@ suite("#CONTADIGITAL - #Extrato", () => {
                 done();
             })
             .catch(err => {
+                console.log(err);
                 done(err);
             });
 
