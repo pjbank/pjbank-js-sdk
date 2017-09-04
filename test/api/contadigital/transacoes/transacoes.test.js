@@ -11,6 +11,8 @@ const test = lab.test;
 const expect = require('chai').expect;
 const assert = require('chai').assert;
 
+const moment = require('moment');
+
 
 suite("#CONTADIGITAL - #Transacoes", () => {
 
@@ -19,8 +21,8 @@ suite("#CONTADIGITAL - #Transacoes", () => {
         const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
 
         const DadosTransacao = {
-            "data_vencimento": "09/30/2017",
-            "data_pagamento": "09/30/2017",
+            "data_vencimento": moment().format('MM/DD/YYYY'),
+            "data_pagamento": moment().format('MM/DD/YYYY'),
             "valor": 20.00,
             "banco_favorecido": "033",
             "agencia_favorecido": "1111",
@@ -61,8 +63,8 @@ suite("#CONTADIGITAL - #Transacoes", () => {
         const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
 
         const DadosTransacao = {
-            "data_vencimento": "09/30/2017",
-            "data_pagamento": "09/30/2017",
+            "data_vencimento": moment().format('MM/DD/YYYY'),
+            "data_pagamento": moment().format('MM/DD/YYYY'),
             "valor": 10.50,
             "codigo_barras": "03399699255873781001843279301014571980000001000"
         };
@@ -95,8 +97,8 @@ suite("#CONTADIGITAL - #Transacoes", () => {
         const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
 
         const Transacoes = [{
-                "data_vencimento": "08/30/2017",
-                "data_pagamento": "08/30/2017",
+                "data_vencimento": moment().format('MM/DD/YYYY'),
+                "data_pagamento": moment().format('MM/DD/YYYY'),
                 "valor": 20.00,
                 "banco_favorecido": "033",
                 "agencia_favorecido": "1111-X",
@@ -109,8 +111,8 @@ suite("#CONTADIGITAL - #Transacoes", () => {
                 "tipo_conta_favorecido": "corrente"
             },
             {
-                "data_vencimento": "09/30/2017",
-                "data_pagamento": "09/30/2017",
+                "data_vencimento": moment().format('MM/DD/YYYY'),
+                "data_pagamento": moment().format('MM/DD/YYYY'),
                 "valor": 10.50,
                 "codigo_barras": "03399699255873781001843279301014571980000001000"
             }
@@ -180,8 +182,8 @@ suite("#CONTADIGITAL - #Transacoes", () => {
         const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
 
         const DadosTransacao = {
-            "data_vencimento": "09/30/2017",
-            "data_pagamento": "09/30/2017",
+            "data_vencimento": moment().format('MM/DD/YYYY'),
+            "data_pagamento": moment().format('MM/DD/YYYY'),
             "valor": 10.50,
             "codigo_barras": "03399699255873781001843279301014571980000001000"
         };
