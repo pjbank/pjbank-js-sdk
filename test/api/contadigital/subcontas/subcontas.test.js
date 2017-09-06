@@ -11,6 +11,8 @@ const test = lab.test;
 const expect = require('chai').expect;
 const assert = require('chai').assert;
 
+const moment = require('moment');
+
 suite("#CONTADIGITAL - #Subcontas", () => {
 
     test('Criando uma Subconta', done => {
@@ -76,5 +78,50 @@ suite("#CONTADIGITAL - #Subcontas", () => {
 
     });
 
+    test('Adicionando saldo a uma Subconta', done => {
+
+        const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
+        const subconta = "c912936cf31980ca84c23194f64b27fedfe0d718";
+        const valorDeSaldo = 150.30;
+
+        PJBank.Subcontas.adicionarSaldo(subconta, valorDeSaldo)
+            .then(boleto => {
+                expect(boleto).to.have.property('id_unico');
+                expect(boleto).to.have.property('link_boleto');
+                expect(boleto).to.have.property('linha_digitavel');
+                done();
+            })
+            .catch(err => {
+                done(err);
+            });
+
+    });
+
+
+    test('Realizando uma transferência de saldo para a subconta', done => {
+
+        const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
+        const subconta = "c912936cf31980ca84c23194f64b27fedfe0d718";
+        const valorDeSaldo = 150.30;
+
+        const dadosTransacao = {
+            'conta_destino': subconta,
+            'data_pagamento': moment().format('MM/DD/YYYY'),
+            'valor': 15.50
+        };
+
+        PJBank.ContaDigital.transacao(dadosTransacao)
+            .then(transacao => {
+                expect(transacao).to.have.property('msg');
+                expect(transacao).to.have.property('id_operacao');
+                expect(transacao).to.have.property('data_pagamento');
+                done();
+            })
+            .catch(err => {
+                console.log(err);
+                done(err);
+            });
+
+    });
 
 });
