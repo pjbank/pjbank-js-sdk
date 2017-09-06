@@ -73,7 +73,7 @@ PJBank.Subcontas.subconta(subconta)
 }
 ```
 
-## Criando um boleto bancário para adicionar saldo a uma Subconta
+## Criando um boleto bancario para adicionar saldo a uma Subconta
 
 ```javascript
 
@@ -100,7 +100,7 @@ PJBank.Subcontas.adicionarSaldo(subconta, valorDeSaldo)
 }
 ```
 
-## Fazendo uma transferência de saldo para uma Subconta
+## Realizando uma transferência de saldo para uma Subconta
 
 ```javascript
 const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
