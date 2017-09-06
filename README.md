@@ -7,10 +7,8 @@
 ## Instalacão
 
 ```
- npm install pjbank-sdk-js
+ npm install @pjbank/pjbank-js-sdk
 ```
-
-
 
 ```javascript
 const PJBankSDK = require('pjbank-sdk-js');
