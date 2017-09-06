@@ -1,38 +1,39 @@
 {
-    "name": "@pjbank/pjbank-js-sdk",
-    "version": "1.0.0",
-    "description": "SDK de Integração do PJBank Recebimentos e Conta Digital",
-    "main": "lib/pjbank.js",
-    "scripts": {
-        "test": "bash -c './node_modules/.bin/lab -v -l -m 150000 -a chai'"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/pjbank/pjbank-js-sdk.git"
-    },
-    "keywords": [
-        "fintech",
-        "boleto",
-        "cartao",
-        "pjbank"
-    ],
-    "author": "Matheus Fidelis",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/pjbank/pjbank-js-sdk/issues"
-    },
-    "homepage": "https://github.com/pjbank/pjbank-js-sdk#readme",
-    "dependencies": {
-        "colors": "^1.1.2",
-        "pjbank-api-client": "^1.0.5",
-        "moment": "^2.18.1"
-    },
-    "devDependencies": {
-        "chai": "^4.1.1",
-        "lab": "^14.1.2"
-    },
-    "directories": {
-        "doc": "docs",
-        "test": "test"
-    }
+  "name": "@pjbank/pjbank-js-sdk",
+  "version": "1.0.0",
+  "description": "SDK de Integração do PJBank Recebimentos e Conta Digital",
+  "main": "lib/pjbank.js",
+  "scripts": {
+    "test": "bash -c './node_modules/.bin/lab -v -l -m 150000 -a chai'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjbank/pjbank-js-sdk.git"
+  },
+  "keywords": [
+    "fintech",
+    "boleto",
+    "cartao",
+    "pjbank"
+  ],
+  "author": "Matheus Fidelis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pjbank/pjbank-js-sdk/issues"
+  },
+  "homepage": "https://github.com/pjbank/pjbank-js-sdk#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "faker": "^4.1.0",
+    "moment": "^2.18.1",
+    "pjbank-api-client": "^1.0.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "lab": "^14.1.2"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  }
 }
