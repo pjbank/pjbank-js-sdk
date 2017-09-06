@@ -18,27 +18,22 @@ suite("#CONTADIGITAL - #Extrato", () => {
 
     test('Gerando o extrato de transacões filtrado por data', (done) => {
 
-        // const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
+        const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
 
-        // const opcoes = {
-        //     data_inicio: "09/01/2017",
-        //     data_fim: "09/04/2017"
-        // };
+        const opcoes = {
+            data_inicio: "09/01/2017",
+            data_fim: "09/04/2017"
+        };
 
-        // PJBank.ContaDigital.extrato(opcoes)
-        //     .then(extrato => {
-        //         expect(extrato).to.have.property('status');
-        //         assert.equal(extrato.status, 200);
-
-        //         expect(extrato).to.have.property('data');
-        //         expect(extrato.data).to.be.a('array');
-
-        //         done();
-        //     })
-        //     .catch(err => {
-        //         console.log(err);
-        //         done(err);
-        //     });
+        PJBank.ContaDigital.extrato(opcoes)
+            .then(extrato => {
+                expect(extrato).to.be.a('array');
+                done();
+            })
+            .catch(err => {
+                console.log(err);
+                done(err);
+            });
 
     });
 

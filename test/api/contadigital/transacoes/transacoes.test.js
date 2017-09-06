@@ -41,12 +41,10 @@ suite("#CONTADIGITAL - #Transacoes", () => {
                 expect(transacao).to.have.property('status');
                 assert.equal(transacao.status, 201);
 
-                expect(transacao).to.have.property('data');
-                expect(transacao.data).to.be.a('array');
-                expect(transacao.data[0]).to.have.property('msg');
-                expect(transacao.data[0]).to.have.property('id_operacao');
-                expect(transacao.data[0]).to.have.property('data_pagamento');
-                assert.equal(transacao.data[0].data_pagamento, DadosTransacao.data_pagamento);
+                expect(transacao).to.have.property('msg');
+                expect(transacao).to.have.property('id_operacao');
+                expect(transacao).to.have.property('data_pagamento');
+                assert.equal(transacao.data_pagamento, DadosTransacao.data_pagamento);
 
                 done();
             })
@@ -75,12 +73,10 @@ suite("#CONTADIGITAL - #Transacoes", () => {
                 expect(transacao).to.have.property('status');
                 assert.equal(transacao.status, 201);
 
-                expect(transacao).to.have.property('data');
-                expect(transacao.data).to.be.a('array');
-                expect(transacao.data[0]).to.have.property('msg');
-                expect(transacao.data[0]).to.have.property('id_operacao');
-                expect(transacao.data[0]).to.have.property('data_pagamento');
-                assert.equal(transacao.data[0].data_pagamento, DadosTransacao.data_pagamento);
+                expect(transacao).to.have.property('msg');
+                expect(transacao).to.have.property('id_operacao');
+                expect(transacao).to.have.property('data_pagamento');
+                assert.equal(transacao.data_pagamento, DadosTransacao.data_pagamento);
 
                 done();
             })
@@ -120,19 +116,14 @@ suite("#CONTADIGITAL - #Transacoes", () => {
 
         PJBank.ContaDigital.transacao(Transacoes)
             .then((transacoes) => {
+                expect(transacoes).to.be.a('array');
 
-                expect(transacoes).to.have.property('status');
-                assert.equal(transacoes.status, 201);
-
-                expect(transacoes).to.have.property('data');
-                expect(transacoes.data).to.be.a('array');
-
-                expect(transacoes.data[0]).to.have.property('msg');
-                expect(transacoes.data[0]).to.have.property('id_operacao');
-                expect(transacoes.data[0]).to.have.property('data_pagamento');
-                expect(transacoes.data[1]).to.have.property('msg');
-                expect(transacoes.data[1]).to.have.property('id_operacao');
-                expect(transacoes.data[1]).to.have.property('data_pagamento');
+                expect(transacoes[0]).to.have.property('msg');
+                expect(transacoes[0]).to.have.property('id_operacao');
+                expect(transacoes[0]).to.have.property('data_pagamento');
+                expect(transacoes[1]).to.have.property('msg');
+                expect(transacoes[1]).to.have.property('id_operacao');
+                expect(transacoes[1]).to.have.property('data_pagamento');
 
                 done();
 
@@ -141,9 +132,6 @@ suite("#CONTADIGITAL - #Transacoes", () => {
                 console.log(err);
                 done(err);
             });
-
-
-
     });
 
 
@@ -154,18 +142,15 @@ suite("#CONTADIGITAL - #Transacoes", () => {
         PJBank.ContaDigital.status("1000000000709")
             .then(status => {
 
-                expect(status).to.have.property('status');
-                assert.equal(status.status, 200);
-
-                expect(status).to.have.property('data');
-                expect(status.data).to.be.a('array');
-
-                expect(status.data[0]).to.have.property('id_operacao');
-                expect(status.data[0]).to.have.property('status_operacao');
-                expect(status.data[0]).to.have.property('data_pagamento');
-                expect(status.data[0]).to.have.property('aprovacoes_confirmadas');
-                expect(status.data[0]).to.have.property('qtd_aprovacoes');
-                expect(status.data[0]).to.have.property('msg');
+                expect(status).to.have.property('id_operacao');
+                expect(status).to.have.property('status_operacao');
+                expect(status).to.have.property('data_pagamento');
+                expect(status).to.have.property('autorizacoes_realizadas');
+                expect(status).to.have.property('autorizacoes_disponiveis');
+                expect(status).to.have.property('autorizacoes_necessarias');
+                expect(status).to.have.property('msg');
+                expect(status).to.have.property('detalhes');
+                expect(status).to.have.property('historico');
 
                 done();
             })
@@ -191,16 +176,12 @@ suite("#CONTADIGITAL - #Transacoes", () => {
         PJBank.ContaDigital.transacao(DadosTransacao)
             .then(transacao => {
 
-                PJBank.ContaDigital.cancelar(transacao.data[0].id_operacao)
+                PJBank.ContaDigital.cancelar(transacao.id_operacao)
                     .then(cancelamento => {
 
                         expect(cancelamento).to.have.property('status');
                         expect(cancelamento).to.have.property('msg');
                         assert.equal(cancelamento.status, 200);
-
-                        expect(cancelamento).to.have.property('data');
-                        expect(cancelamento.data).to.be.a('array');
-
                         done();
                     })
                     .catch(err => {
