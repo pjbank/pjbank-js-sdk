@@ -34,14 +34,8 @@
 ```json
 {
     "status": "201",
-    "msg": "Todos os itens foram processados com sucesso.",
-    "data": [
-        {
-            "status": "201",
-            "msg": "Despesa cadastrada com sucesso.",
-            "id_operacao": "1000000005263"
-        }
-    ]
+    "msg": "Despesa cadastrada com sucesso.",
+    "id_operacao": "1000000005263"
 }
 ```
 
@@ -70,20 +64,12 @@
 ### Output 
 
 ```json
-
 {
     "status": "201",
-    "msg": "Todos os itens foram processados com sucesso.",
-    "data": [
-        {
-            "status": "201",
-            "msg": "Despesa cadastrada com sucesso.",
-            "id_operacao": "1000000000698",
-            "data_pagamento": "08/30/2017"
-        }
-    ]
+    "msg": "Despesa cadastrada com sucesso.",
+    "id_operacao": "1000000000698",
+    "data_pagamento": "08/30/2017"
 }
-
 ```
 
 
@@ -170,18 +156,10 @@
 ### Output
 
 ```json
-
 {
     "status": "200",
-    "msg": "Todos os itens foram processados com sucesso.",
-    "data": [
-        {
-            "status": "200",
-            "msg": "Despesa #123123 cancelada com sucesso."
-        }
-    ]
+    "msg": "Despesa #123123 cancelada com sucesso."
 }
-
 ```
 
 
@@ -205,6 +183,20 @@
 ### Output
 
 ```json
+{
+    "nome_empresa": "RAJ LTDA",
+    "cnpj": "14986640000127",
+    "email": "bruno.reyller@superlogica.com",
+    "telefone": "1932323232",
+    "cep": "13045080",
+    "endereco": "Rua Lucas Nogueira Garcês, 214",
+    "numero": "214",
+    "bairro": "Jd. Centenário",
+    "complemento": "Jd. Centenário",
+    "cidade": "Campinas",
+    "estado": "SP",
+    "status": "ativa"
+}
 ```
 
 
@@ -230,31 +222,28 @@
 ### Output
 
 ```json
-{
-    "status": "200",
-    "data": [
-        {
-            "status": "Aprovado",
-            "cnpj_favorecido": "",
-            "favorecido": "",
-            "data": "08/28/2017",
-            "valor": "-0.03",
-            "historico": "Transferência para cartão #9385 Matheus S Fidelis",
-            "id": "1000000000638",
-            "identificador": "73",
-            "tipo_transacao": "Pagamento"
-        },
-        {
-            "status": "Aprovado",
-            "cnpj_favorecido": "",
-            "favorecido": "",
-            "data": "08/25/2017",
-            "valor": "-0.03",
-            "historico": "Transferência para cartão #9385 Matheus S Fidelis",
-            "id": "1000000000637",
-            "identificador": "72",
-            "tipo_transacao": "Pagamento"
-        }
-    ]
-}
+[
+    {
+        "status": "Aprovado",
+        "cnpj_favorecido": "",
+        "favorecido": "",
+        "data": "08/28/2017",
+        "valor": "-0.03",
+        "historico": "Transferência para cartão #9385 Matheus S Fidelis",
+        "id": "1000000000638",
+        "identificador": "73",
+        "tipo_transacao": "Pagamento"
+    },
+    {
+        "status": "Aprovado",
+        "cnpj_favorecido": "",
+        "favorecido": "",
+        "data": "08/25/2017",
+        "valor": "-0.03",
+        "historico": "Transferência para cartão #9385 Matheus S Fidelis",
+        "id": "1000000000637",
+        "identificador": "72",
+        "tipo_transacao": "Pagamento"
+    }
+]
 ```

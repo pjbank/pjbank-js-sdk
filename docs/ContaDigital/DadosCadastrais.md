@@ -15,9 +15,6 @@
 ### Output
 
 ```json
-{"status": 200,
-  "msg": "Sucesso",
-  "data":
    { "nome_empresa": "Exemplo Conta Digital",
      "cnpj": "27661036000172",
      "email": "api@pjbank.com.br",
@@ -29,6 +26,7 @@
      "complemento": "",
      "cidade": "Campinas",
      "estado": "SP",
-     "status": "inativa" } }
+     "status": "inativa" 
+   }
 
 ```
