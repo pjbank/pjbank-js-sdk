@@ -32,7 +32,6 @@ suite("#CONTADIGITAL - #Transacoes", () => {
             "descricao": "Descrição de exemplo",
             "solicitante": "Teste DOC/TED",
             "tipo_conta_favorecido": "corrente"
-
         };
 
         PJBank.ContaDigital.transacao(DadosTransacao)

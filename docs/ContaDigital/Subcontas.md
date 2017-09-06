@@ -73,7 +73,7 @@ PJBank.Subcontas.subconta(subconta)
 }
 ```
 
-## Criando um boleto bancário para adicionar saldo a uma Subconta
+## Criando um boleto bancario para adicionar saldo a uma Subconta
 
 ```javascript
 
@@ -100,7 +100,7 @@ PJBank.Subcontas.adicionarSaldo(subconta, valorDeSaldo)
 }
 ```
 
-## Fazendo uma transferência de saldo para uma Subconta
+## Realizando uma transferência de saldo para uma Subconta
 
 ```javascript
 const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
@@ -131,4 +131,19 @@ PJBank.ContaDigital.transacao(dadosTransacao)
     "id_operacao": "1000000001401",
     "data_pagamento": "09/10/2017"
 }
+```
+
+## Desativando um administrador na Conta Digital
+
+```javascript
+
+const email = "api@pjbank.com.br";
+
+PJBank.ContaDigital.desativar(email)
+    .then(status => {
+        console.log(status);
+    })
+    .catch(err => {
+        console.log(err);
+    });
 ```
