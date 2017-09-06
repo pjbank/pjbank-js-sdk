@@ -115,3 +115,10 @@ Para mais informações consulte a [documentação da nossa API](http://docs.pjb
 * [Consultando os dados de uma Subconta](docs/ContaDigital/Subcontas.md#Consultando-os-dados-de-uma-Subconta)
 * [Criando um boleto bancário para adicionar saldo a uma Subconta](docs/ContaDigital/Subcontas.md#Criando-um-boleto-bancario-para-adicionar-saldo-a-uma-subconta)
 * [Realizando transferências de saldo para subcontas](docs/ContaDigital/Subcontas.md#Realizando-uma-transferência-de-saldo-para-uma-Subconta)
+
+
+### Administradores
+
+* [Convidando uma pessoa física para administrar a Conta Digital](docs/ContaDigital/Administradores.md#Convidando-uma-pessoa-física-para-administrar-a-Conta-Digital)
+* [Listando os Administradores da Conta Digital](docs/ContaDigital/Administradores.md#Listando-os-Administradores-da-Conta-Digital)
+* [Listando os Administradores da Conta Digital](docs/ContaDigital/Administradores.md#Desativando-um-Administrador-da-Conta-Digital)

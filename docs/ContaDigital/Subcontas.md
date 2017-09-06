@@ -132,3 +132,18 @@ PJBank.ContaDigital.transacao(dadosTransacao)
     "data_pagamento": "09/10/2017"
 }
 ```
+
+## Desativando um administrador na Conta Digital
+
+```javascript
+
+const email = "api@pjbank.com.br";
+
+PJBank.ContaDigital.desativar(email)
+    .then(status => {
+        console.log(status);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+```

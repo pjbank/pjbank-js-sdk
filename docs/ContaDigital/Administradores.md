@@ -52,9 +52,15 @@ PJBank.ContaDigital.Administradores.listar()
 ## Desativando um Administrador da Conta Digital
 
 ```javascript
-```
 
-### Output
+const email = "api@pjbank.com.br";
 
-```json
+PJBank.ContaDigital.Administradores.desativar(email)
+    .then(desativacao => {
+        console.log(desativacao);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+
 ```
