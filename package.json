@@ -1,5 +1,5 @@
 {
-    "name": "pjbank-js-sdk",
+    "name": "@pjbank/pjbank-js-sdk",
     "version": "1.0.0",
     "description": "SDK de Integração do PJBank Recebimentos e Conta Digital",
     "main": "lib/pjbank.js",
@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/msfidelis/pjbank-js-sdk.git"
+        "url": "git+https://github.com/pjbank/pjbank-js-sdk.git"
     },
     "keywords": [
         "fintech",
@@ -19,17 +19,20 @@
     "author": "Matheus Fidelis",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/msfidelis/pjbank-js-sdk/issues"
+        "url": "https://github.com/pjbank/pjbank-js-sdk/issues"
     },
-    "homepage": "https://github.com/msfidelis/pjbank-js-sdk#readme",
+    "homepage": "https://github.com/pjbank/pjbank-js-sdk#readme",
     "dependencies": {
         "colors": "^1.1.2",
-        "moment": "^2.18.1",
-        "pjbank-api-client": "^1.0.5"
+        "pjbank-api-client": "^1.0.5",
+        "moment": "^2.18.1"
     },
     "devDependencies": {
         "chai": "^4.1.1",
-        "faker": "^4.1.0",
         "lab": "^14.1.2"
+    },
+    "directories": {
+        "doc": "docs",
+        "test": "test"
     }
 }
