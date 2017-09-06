@@ -24,6 +24,8 @@
   "homepage": "https://github.com/pjbank/pjbank-js-sdk#readme",
   "dependencies": {
     "colors": "^1.1.2",
+    "faker": "^4.1.0",
+    "moment": "^2.18.1",
     "pjbank-api-client": "^1.0.5"
   },
   "devDependencies": {

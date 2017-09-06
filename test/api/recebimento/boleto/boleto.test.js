@@ -40,9 +40,8 @@ suite("#RECEBIMENTO - #Boleto Bancário", () => {
 
             done();
         }).catch((err) => {
-            assert.isTrue(false);
             console.log(err);
-            done();
+            done(err);
         });
 
     });
@@ -86,13 +85,12 @@ suite("#RECEBIMENTO - #Boleto Bancário", () => {
                 .catch((err) => {
                     console.log(err);
                     assert.isTrue(false);
-                    done();
+                    done(err);
                 });
 
         }).catch((err) => {
             console.log(err);
-            assert.isTrue(false);
-            done();
+            done(err);
         });
 
     });

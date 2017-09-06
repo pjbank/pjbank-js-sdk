@@ -52,8 +52,7 @@ suite("#RECEBIMENTO - #Cartão de Crédito", () => {
             })
             .catch((err) => {
                 console.log(err);
-                assert.isTrue(false);
-                done();
+                done(err);
             });
 
     });
@@ -89,8 +88,7 @@ suite("#RECEBIMENTO - #Cartão de Crédito", () => {
             })
             .catch((err) => {
                 console.log(err);
-                assert.isTrue(false);
-                done();
+                done(err);
             });
 
     });
@@ -122,15 +120,13 @@ suite("#RECEBIMENTO - #Cartão de Crédito", () => {
                     })
                     .catch((err) => {
                         console.log(err);
-                        assert.isTrue(false);
-                        done();
+                        done(err);
                     });
 
             })
             .catch((err) => {
                 console.log(err);
-                assert.isTrue(false);
-                done();
+                done(err);
             });
 
     });
@@ -165,9 +161,7 @@ suite("#RECEBIMENTO - #Cartão de Crédito", () => {
             })
             .catch((err) => {
                 console.log(err);
-                assert.isTrue(false);
-
-                done();
+                done(err);
             });
 
     });
