@@ -4,7 +4,8 @@
   "description": "SDK de Integração do PJBank Recebimentos e Conta Digital",
   "main": "lib/pjbank.js",
   "scripts": {
-    "test": "bash -c './node_modules/.bin/lab -v -l -m 150000 -a chai'"
+    "test": "bash -c './node_modules/.bin/lab -v -l -m 150000 -a chai'",
+    "coverage": "nyc --reporter=html npm run test"
   },
   "repository": {
     "type": "git",
