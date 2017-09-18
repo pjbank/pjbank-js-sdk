@@ -4,6 +4,8 @@ const PJBankSDK = require("./lib/pjbank");
 
 const PJBank = new PJBankSDK("eb2af021c5e2448c343965a7a80d7d090eb64164", "a834d47e283dd12f50a1b3a771603ae9dfd5a32c");
 
+PJBank.developer(true);
+
 const DadosTransacao = {
     data_vencimento: "09/30/2017",
     data_pagamento: "09/30/2017",
@@ -19,14 +21,13 @@ const DadosTransacao = {
     tipo_conta_favorecido: "corrente"
 };
 
-
 PJBank.ContaDigital.transacao(DadosTransacao)
     .then((transacao) => {
         console.log(transacao);
     })
     .catch(err => {
         console.log(err);
-    })
+    });
 
 // 'use strict';
 // const request = require('request');

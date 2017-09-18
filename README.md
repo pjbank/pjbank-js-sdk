@@ -11,7 +11,7 @@
 ```
 
 ```javascript
-const PJBankSDK = require('pjbank-sdk-js');
+const PJBankSDK = require('@pjbank/pjbank-sdk-js');
 ```
 
 ## Quickstart
@@ -23,6 +23,14 @@ const credencial = "d3418668b85cea70aa28965eafaf927cd34d004c";
 const chave = "ef947cf5867488f744b82744dd3a8fc4852e529f";
 
 const PJBank = new PJBankSDK(credencial, chave);
+```
+
+## Usando o ambiente de sandbox
+
+Para realizar os requests para o ambiente de sandbox, basta:
+
+```javascript
+PJBank.developer(true);
 ```
 
 ### Exemplo - Emissão de boleto
