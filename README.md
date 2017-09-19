@@ -102,9 +102,12 @@ Para mais informações consulte a [documentação da nossa API](http://docs.pjb
     * [Filtrando por cobrancas liquidadas](docs/Recebimento/ExtratoBancario.md#filtrando-somente-por-cobrancas-liquidadas-no-extrato)
     * [Filtrando o extrato por data](docs/Recebimento/ExtratoBancario.md#filtrando-o-extrato-por-data)
     * [Paginando o extrato](docs/Recebimento/ExtratoBancario.md#paginando-o-extrato)
+
+
 ## Conta Digital 
 
 > Disponibilizamos também a cobertura da API Da Conta Digital do PJBank via SDK! 
+
 
 ### Transações 
 
@@ -113,9 +116,11 @@ Para mais informações consulte a [documentação da nossa API](http://docs.pjb
 * [Gerando transacões em lotes](docs/ContaDigital/Transacoes.md#Gerando-transacoes-em-lotes)
 * [Como cancelar uma transacão na Conta Digital](docs/ContaDigital/Transacoes.md#Cancelando-transacoes-na-Conta-Digital)
 
+
 ### Extratos da Conta Digital
 
 * [Como consultar o extrato de transacões da Conta Digital](docs/ContaDigital/Transacoes.md#Gerando-um-extrato-de-transacoes)
+
 
 ### Subcontas
 
