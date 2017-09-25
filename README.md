@@ -75,7 +75,7 @@ Para mais informações consulte a [documentação da nossa API](http://docs.pjb
 ### Boleto Bancário 
 
 * [Emitindo boletos bancários](docs/Recebimento/EmitirBoletoBancario.md) 
-
+    * [Credenciamento](docs/Recebimento/EmitirBoletoBancario.md#Credenciamento)
     * [Quickstart](docs/Recebimento/EmitirBoletoBancario.md#Quickstart-com-o-Boleto-bancário)
     * [Customizacão do Boleto bancário](docs/Recebimento/EmitirBoletoBancario.md#Customizacao-do-Boleto-bancário)
 
@@ -85,7 +85,7 @@ Para mais informações consulte a [documentação da nossa API](http://docs.pjb
 ### Cartão de Crédito 
 
 * [Criando transacões de cartão de crédito](docs/Recebimento/TransacaoDeCartao.md) 
-
+    * [Credenciamento](docs/Recebimento/TransacaoDeCartao.md#Credenciamento)
     * [Criando uma transação com os dados do cartão](docs/Recebimento/TransacaoDeCartao.md#quickstart-rapido)
     * [Criando uma transação utilizando um Token](docs/Recebimento/TransacaoDeCartao.md#gerando-uma-transacao-utilizando-um-token)
     
