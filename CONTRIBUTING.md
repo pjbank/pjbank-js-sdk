@@ -27,3 +27,11 @@ npm run coverage
 ```bash
 sudo npm install -g jshint 
 ```
+
+Você pode executar o jshint diretamente do seu editor. 
+
+* ![Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint)
+* ![Sublime Text](https://github.com/victorporof/Sublime-JSHint)
+* ![Atom](https://github.com/sindresorhus/atom-jshint)
+
+* ![Mais opções](http://jshint.com/install/)
