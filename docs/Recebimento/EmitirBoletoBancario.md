@@ -1,6 +1,43 @@
 
 # Emitir um boleto bancário via API 
 
+## Credenciamento 
+
+> Você pode efetuar o credenciamento da sua empresa para receber via boleto bancário diretamente via API e utilizando nosso SDK
+
+```javascript
+const dadosEmpresa = {
+    "nome_empresa": "Empresa de Exemplo",
+    "conta_repasse": "99999-9",
+    "agencia_repasse": "0001",
+    "banco_repasse": "001",
+    "cnpj": "87597764000194",
+    "ddd": "19",
+    "telefone": "40096830",
+    "email": "atendimento@pjbank.com.br",
+    "cartao": true
+};
+
+PJBank.credenciar(dadosEmpresa)
+    .then(credenciais => {
+        console.log(credenciais);
+    });
+```
+
+### Output
+
+```json
+{
+    "status": "201",
+    "msg": "Sucesso ao credenciar",
+    "credencial": "4c6c65f747918f773306301b75460c2758253865",
+    "chave": "30fd09e47a39cc21fb272fdbcd2cee8ae944d69c",
+    "conta_virtual": "39117",
+    "agencia_virtual": ""
+}
+```
+
+
 ## Quickstart com o Boleto bancário 
 
 > O mínimo que você vai precisar para emissão de boletos bancários via API do PJBank

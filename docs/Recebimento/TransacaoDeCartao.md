@@ -1,6 +1,42 @@
 
 # Criar uma transacão de Cartão de Crédito via API
 
+## Credenciamento 
+
+> Você pode efetuar o credenciamento da sua empresa para receber via Cartão de Crédito diretamente via API e utilizando nosso SDK. Para diferenciar uma conta de recebimento via Cartão de Crédito de uma conta de recebimento via Boleto Bancário, será necessario informar o parâmetro `cartao : true` na requisicão
+
+```javascript
+const dadosEmpresa = {
+    "nome_empresa": "Empresa de Exemplo",
+    "conta_repasse": "99999-9",
+    "agencia_repasse": "0001",
+    "banco_repasse": "001",
+    "cnpj": "50282264000153",
+    "ddd": "19",
+    "telefone": "40096830",
+    "email": "atendimento@pjbank.com.br",
+    "cartao": true
+};
+
+PJBank.credenciar(dadosEmpresa)
+    .then(credenciais => {
+        console.log(credenciais);
+    });
+```
+
+### Output
+
+```json
+{
+    "status": "201",
+    "msg": "Sucesso ao credenciar",
+    "credencial": "bd9270bbad9136c2dddbd1664f5fc1fe3dace651",
+    "chave": "0ffbdc2a9bb17918074dc0c18d63c375ee745349",
+    "conta_virtual": "39117",
+    "agencia_virtual": ""
+}
+```
+
 ## Quickstart rápido
 
 > O mínimo que você vai precisar para gerar um pagamento via cartão 
