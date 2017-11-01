@@ -1,8 +1,4 @@
-# pjbank-js-sdk
-
-[![Build Status](https://travis-ci.org/pjbank/pjbank-js-sdk.svg?branch=master)](http://travis-ci.org/pjbank/pjbank-js-sdk)
-
-![Construcao](https://openclipart.org/image/2400px/svg_to_png/231626/underconstruction.png)
+# PJBank SDK para NodeJS   [![Build Status](https://travis-ci.org/pjbank/pjbank-js-sdk.svg?branch=master)](http://travis-ci.org/pjbank/pjbank-js-sdk)
 
 ## Instalacão
 
