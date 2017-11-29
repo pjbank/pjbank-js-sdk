@@ -133,7 +133,7 @@ PJBank.boleto(dadosBoleto)
 
 ```
 
-## Emissão de boletos bancários em lotes
+## Emissao de boletos em lotes
 
 > Você pode enviar um lote de até `200` cobranças para gerar um lote. As mesmas devem ser enviadas no parâmetro `cobrancas` dentro de um array`
 
