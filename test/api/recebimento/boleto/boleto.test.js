@@ -46,6 +46,58 @@ suite("#RECEBIMENTO - #Boleto Bancário", () => {
 
     });
 
+
+    test('Emitindo boletos em lote', (done) => {
+
+        const PJBank = new PJBankSDK(credencialBoleto, chaveBoleto);
+        PJBank.boleto({
+            cobrancas: [{
+                    "nome_cliente": "Cliente de Exemplo",
+                    "cpf_cliente": "29454730000144",
+                    "valor": 10.50,
+                    "vencimento": "12/30/2019"
+                },
+                {
+                    "nome_cliente": "Cliente de Exempl2o",
+                    "cpf_cliente": "29454730000144",
+                    "valor": 15.50,
+                    "vencimento": "12/30/2019"
+                }
+            ]
+        }).then((boletos) => {
+
+            expect(boletos).to.be.a('array');
+            expect(boletos).to.have.length(2);
+
+            expect(boletos[0]).to.have.property('status');
+            assert.equal(boletos[0].status, 201);
+            expect(boletos[0]).to.have.property('msg');
+            assert.equal(boletos[0].msg, 'Sucesso.');
+
+            expect(boletos[0]).to.have.property('nossonumero');
+            expect(boletos[0]).to.have.property('id_unico');
+            expect(boletos[0]).to.have.property('banco_numero');
+            expect(boletos[0]).to.have.property('token_facilitador');
+            expect(boletos[0]).to.have.property('credencial');
+            expect(boletos[0]).to.have.property('linkBoleto');
+            expect(boletos[0]).to.have.property('linhaDigitavel');
+
+            expect(boletos[1]).to.have.property('nossonumero');
+            expect(boletos[1]).to.have.property('id_unico');
+            expect(boletos[1]).to.have.property('banco_numero');
+            expect(boletos[1]).to.have.property('token_facilitador');
+            expect(boletos[1]).to.have.property('credencial');
+            expect(boletos[1]).to.have.property('linkBoleto');
+            expect(boletos[1]).to.have.property('linhaDigitavel');
+
+            done();
+        }).catch((err) => {
+            console.log(err);
+            done(err);
+        });
+
+    });
+
     test('Imprimindo boletos', (done) => {
 
         const pedidoNumero = faker.random.number();

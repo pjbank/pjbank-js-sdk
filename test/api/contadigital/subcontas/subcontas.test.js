@@ -97,31 +97,33 @@ suite("#CONTADIGITAL - #Subcontas", () => {
 
     });
 
+    // Teste removido por manutenções nessa funcionalidade da API
 
-    test('Realizando uma transferência de saldo para a subconta', done => {
+    // test('Realizando uma transferência de saldo para a subconta', done => {
 
-        const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
-        const subconta = "c912936cf31980ca84c23194f64b27fedfe0d718";
-        const valorDeSaldo = 150.30;
+    //     const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
+    //     const subconta = "b2240b16b373446935a2a7ab437577a823f22eaa";
+    //     const valorDeSaldo = 150.30;
 
-        const dadosTransacao = {
-            'conta_destino': subconta,
-            'data_pagamento': moment().format('MM/DD/YYYY'),
-            'valor': 15.50
-        };
+    //     const dadosTransacao = {
+    //         'conta_destino': subconta,
+    //         'data_pagamento': moment().format('MM/DD/YYYY'),
+    //         'data_vencimento': moment().format('MM/DD/YYYY'),
+    //         'valor': 15.50
+    //     };
 
-        PJBank.ContaDigital.transacao(dadosTransacao)
-            .then(transacao => {
-                expect(transacao).to.have.property('msg');
-                expect(transacao).to.have.property('id_operacao');
-                expect(transacao).to.have.property('data_pagamento');
-                done();
-            })
-            .catch(err => {
-                console.log(err);
-                done(err);
-            });
+    //     PJBank.ContaDigital.transacao(dadosTransacao)
+    //         .then(transacao => {
+    //             expect(transacao).to.have.property('msg');
+    //             expect(transacao).to.have.property('id_operacao');
+    //             expect(transacao).to.have.property('data_pagamento');
+    //             done();
+    //         })
+    //         .catch(err => {
+    //             console.log(err);
+    //             done(err);
+    //         });
 
-    });
+    // });
 
 });

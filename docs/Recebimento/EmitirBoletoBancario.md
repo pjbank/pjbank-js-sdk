@@ -132,3 +132,62 @@ PJBank.boleto(dadosBoleto)
 }
 
 ```
+
+## Emissão de boletos bancários em lotes
+
+> Você pode enviar um lote de até `200` cobranças para gerar um lote. As mesmas devem ser enviadas no parâmetro `cobrancas` dentro de um array`
+
+```javascript
+
+const PJBank = new PJBankSDK(credencialBoleto, chaveBoleto);
+PJBank.boleto({
+    cobrancas: [{
+            "nome_cliente": "Cliente de Exemplo",
+            "cpf_cliente": "29454730000144",
+            "valor": 10.50,
+            "vencimento": "12/30/2019"
+        },
+        {
+            "nome_cliente": "Cliente de Exempl2o",
+            "cpf_cliente": "29454730000144",
+            "valor": 15.50,
+            "vencimento": "12/30/2019"
+        }
+    ]
+}).then((boletos) => {
+    console.log(boletos);
+});
+```
+
+### Output 
+
+```json
+[
+  {
+    "status": "201",
+    "msg": "Sucesso.",
+    "nossonumero": "14889330",
+    "id_unico": "14889330",
+    "banco_numero": "033",
+    "token_facilitador": "abe2658dc12bb4a300cc202b60ec87624a60157d",
+    "credencial": "6ef5e5c493f22ef42d1c052e069af5df3060c090",
+    "linkBoleto":
+      "https://api.pjbank.com.br/boletos/e7551c6ef0481ca0232cf35138ff754bc32e943f",
+    "linkGrupo": "",
+    "linhaDigitavel": "03399.69925 58700.001488 89330.901011 7 81190000001050"
+  },
+  {
+    "status": "201",
+    "msg": "Sucesso.",
+    "nossonumero": "14889331",
+    "id_unico": "14889331",
+    "banco_numero": "033",
+    "token_facilitador": "abe2658dc12bb4a300cc202b60ec87624a60157d",
+    "credencial": "6ef5e5c493f22ef42d1c052e069af5df3060c090",
+    "linkBoleto":
+      "https://api.pjbank.com.br/boletos/f7f4e013d11239c4fd47f9736805c2df37d416e5",
+    "linkGrupo": "",
+    "linhaDigitavel": "03399.69925 58700.001488 89331.701014 9 81190000001550"
+  }
+]
+```
