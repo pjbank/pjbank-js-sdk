@@ -74,7 +74,7 @@ Para mais informações consulte a [documentação da nossa API](http://docs.pjb
     * [Credenciamento](docs/Recebimento/EmitirBoletoBancario.md#Credenciamento)
     * [Quickstart](docs/Recebimento/EmitirBoletoBancario.md#Quickstart-com-o-Boleto-bancário)
     * [Customizacão do Boleto bancário](docs/Recebimento/EmitirBoletoBancario.md#Customizacao-do-Boleto-bancário)
-
+    * [Emissao de boletos em lote](docs/Recebimento/EmitirBoletoBancario.md#Emissao-de-boletos-em-lotes)
 * [Imprimindo boletos em lote](docs/Recebimento/ImpressaoBoletosEmLote.md)
 
 
