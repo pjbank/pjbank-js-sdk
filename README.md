@@ -130,4 +130,4 @@ Para mais informações consulte a [documentação da nossa API](http://docs.pjb
 
 * [Convidando uma pessoa física para administrar a Conta Digital](docs/ContaDigital/Administradores.md#Convidando-uma-pessoa-física-para-administrar-a-Conta-Digital)
 * [Listando os Administradores da Conta Digital](docs/ContaDigital/Administradores.md#Listando-os-Administradores-da-Conta-Digital)
-* [Listando os Administradores da Conta Digital](docs/ContaDigital/Administradores.md#Desativando-um-Administrador-da-Conta-Digital)
+* [Desativando os Administradores da Conta Digital](docs/ContaDigital/Administradores.md#Desativando-um-Administrador-da-Conta-Digital)
