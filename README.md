@@ -32,16 +32,14 @@ PJBank.developer(true);
 ### Exemplo - Emissão de boleto
 
 ```javascript
-PJBank.boleto({
-    "nome_cliente" : "Cliente de Exemplo",
-    "cpf_cliente" : "29454730000144",
-    "valor" : 10.50,
-    "vencimento" : "12/30/2019"
-}).then((boleto) => {
-        console.log(boleto);
-    }).catch((err) => {
-        console.log(boleto);
-    });
+    PJBank.boleto({
+        "nome_cliente" : "Cliente de Exemplo",
+        "cpf_cliente" : "29454730000144",
+        "valor" : 10.50,
+        "vencimento" : "12/30/2019"
+    }).    
+    .then((boleto) => console.log(boleto))
+    .catch((err) => console.log(err));
 
 ```
 
@@ -131,3 +129,13 @@ Para mais informações consulte a [documentação da nossa API](http://docs.pjb
 * [Convidando uma pessoa física para administrar a Conta Digital](docs/ContaDigital/Administradores.md#Convidando-uma-pessoa-física-para-administrar-a-Conta-Digital)
 * [Listando os Administradores da Conta Digital](docs/ContaDigital/Administradores.md#Listando-os-Administradores-da-Conta-Digital)
 * [Desativando os Administradores da Conta Digital](docs/ContaDigital/Administradores.md#Desativando-um-Administrador-da-Conta-Digital)
+
+
+
+## Recebimentos em Conta Digital
+
+Agora você pode receber por Boletos e Cartão de Crédito diretamente em sua Conta Digital, usando a mesma assinatura do SDK do serviço de Recebimentos!
+
+* [Recebendo via Boleto Bancário em sua Conta Digital](docs/ContaDigital/Recebimento/Boleto.md)
+* [Recebendo via Cartão de Crédito em sua Conta Digital](docs/ContaDigital/Recebimento/Cartao.md)
+* [Extratos de Recebimento em sua Conta Digital](docs/ContaDigital/Recebimento/Extrato.md)
