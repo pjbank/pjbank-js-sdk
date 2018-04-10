@@ -31,7 +31,6 @@ suite("#RECEBIMENTOS - #Credenciamento", () => {
 
         PJBank.credenciar(dadosEmpresa)
             .then(credenciais => {
-                console.log(credenciais);
                 expect(credenciais).to.have.property('status');
                 expect(credenciais).to.have.property('msg');
                 expect(credenciais).to.have.property('credencial');
