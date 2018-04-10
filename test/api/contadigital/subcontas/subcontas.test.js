@@ -13,6 +13,8 @@ const assert = require('chai').assert;
 
 const moment = require('moment');
 
+let CREDENCIAL_SUBCONTA = ""
+
 suite("#CONTADIGITAL - #Subcontas", () => {
 
     test('Criando uma Subconta', done => {
@@ -38,6 +40,8 @@ suite("#CONTADIGITAL - #Subcontas", () => {
                 expect(subconta).to.have.property('subconta');
                 expect(subconta).to.have.property('numero_cartao');
 
+                CREDENCIAL_SUBCONTA = subconta.subconta;
+
                 done();
             })
             .catch(err => {
@@ -51,9 +55,7 @@ suite("#CONTADIGITAL - #Subcontas", () => {
     test('Consultando dados de uma Subconta', done => {
         const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
 
-        const subconta = "c912936cf31980ca84c23194f64b27fedfe0d718";
-
-        PJBank.Subcontas.subconta(subconta)
+        PJBank.Subcontas.subconta(CREDENCIAL_SUBCONTA)
             .then(infos => {
 
                 expect(infos).to.have.property('nome_cartao');
@@ -81,10 +83,10 @@ suite("#CONTADIGITAL - #Subcontas", () => {
     test('Adicionando saldo a uma Subconta', done => {
 
         const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
-        const subconta = "c912936cf31980ca84c23194f64b27fedfe0d718";
+
         const valorDeSaldo = 150.30;
 
-        PJBank.Subcontas.adicionarSaldo(subconta, valorDeSaldo)
+        PJBank.Subcontas.adicionarSaldo(CREDENCIAL_SUBCONTA, valorDeSaldo)
             .then(boleto => {
                 expect(boleto).to.have.property('id_unico');
                 expect(boleto).to.have.property('link_boleto');
@@ -96,34 +98,5 @@ suite("#CONTADIGITAL - #Subcontas", () => {
             });
 
     });
-
-    // Teste removido por manutenções nessa funcionalidade da API
-
-    // test('Realizando uma transferência de saldo para a subconta', done => {
-
-    //     const PJBank = new PJBankSDK(credencialContaDigital, chaveContaDigital);
-    //     const subconta = "b2240b16b373446935a2a7ab437577a823f22eaa";
-    //     const valorDeSaldo = 150.30;
-
-    //     const dadosTransacao = {
-    //         'conta_destino': subconta,
-    //         'data_pagamento': moment().format('MM/DD/YYYY'),
-    //         'data_vencimento': moment().format('MM/DD/YYYY'),
-    //         'valor': 15.50
-    //     };
-
-    //     PJBank.ContaDigital.transacao(dadosTransacao)
-    //         .then(transacao => {
-    //             expect(transacao).to.have.property('msg');
-    //             expect(transacao).to.have.property('id_operacao');
-    //             expect(transacao).to.have.property('data_pagamento');
-    //             done();
-    //         })
-    //         .catch(err => {
-    //             console.log(err);
-    //             done(err);
-    //         });
-
-    // });
 
 });
