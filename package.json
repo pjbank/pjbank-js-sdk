@@ -24,16 +24,16 @@
     },
     "homepage": "https://github.com/pjbank/pjbank-js-sdk#readme",
     "dependencies": {
-        "colors": "^1.1.2",
+        "colors": "^1.2.4",
         "faker": "^4.1.0",
         "istanbul": "^0.4.5",
-        "moment": "^2.22.0",
-        "nyc": "^11.2.1",
-        "pjbank-api-client": "^1.0.7"
+        "moment": "^2.22.1",
+        "nyc": "^11.7.2",
+        "pjbank-api-client": "^1.0.8"
     },
     "devDependencies": {
-        "chai": "^4.1.1",
-        "lab": "^14.1.2"
+        "chai": "^4.1.2",
+        "lab": "^14.3.4"
     },
     "directories": {
         "doc": "docs",
