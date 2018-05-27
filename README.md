@@ -139,3 +139,4 @@ Agora você pode receber por Boletos e Cartão de Crédito diretamente em sua Co
 * [Recebendo via Boleto Bancário em sua Conta Digital](docs/ContaDigital/Recebimento/Boleto.md)
 * [Recebendo via Cartão de Crédito em sua Conta Digital](docs/ContaDigital/Recebimento/Cartao.md)
 * [Extratos de Recebimento em sua Conta Digital](docs/ContaDigital/Recebimento/Extrato.md)
+
