@@ -1,6 +1,6 @@
 {
     "name": "@pjbank/pjbank-js-sdk",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "SDK de Integração do PJBank Recebimentos e Conta Digital",
     "main": "lib/pjbank.js",
     "scripts": {
